@@ -9,12 +9,12 @@
         </view>
         <view class="border-t padding-t">
            <checkbox-group bindchange="handleChange">
-                <checkbox value="cb" checked="{{questionData.reqire}}"/>必填
+                <checkbox value="cb" checked="{{questionData.require}}"/>必填
             </checkbox-group>
         </view>
         <view class="border-t padding-t text-r">
-            <text class="icondel f-40"></text>
-            <text class="iconcopy f-40"></text>
+            <text class="icondel f-40" bindtap="delQuestion"></text>
+            <text class="iconcopy f-40"bindtap="copyQuestion"></text>
         </view>
     </view>
 

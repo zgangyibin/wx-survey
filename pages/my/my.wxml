@@ -9,7 +9,7 @@
             </view>
             <text class="h1">问卷标题</text>
             <view class="avatar-con ">
-                <image class="avatar" src=""></image>
+                <image class="avatar" src="/images/homea.png"></image>
                 <text>昵称</text>
             </view>
             <view class="f-25">创建时间：2022-3-3</view>

@@ -8,7 +8,7 @@
             <input type="text" bindinput="changePlaceholder" value="{{questionData.placeholder}}"  class="weui-input" auto-focus placeholder="点击这里补充，让人更容易理解该怎么填"/>
         </view>
         <view class="option" wx:key="id" wx:for="{{questionData.option}}">
-            <view><text class="iconremove f-red"></text></view>
+            <view><text data-id="{{item.id}}" bindtap="delOption" class="iconremove f-red"></text></view>
             <view><input bindinput="changeOption" type="text" value="{{item.text}}" data-id="{{item.id}}" class="weui-input" auto-focus placeholder="点击这里输入选项"/></view>
         </view>
         <view class="option">
@@ -17,12 +17,12 @@
         </view>
         <view class="border-t padding-t">
             <checkbox-group bindchange="handleChange">
-                <checkbox value="cb" checked="{{questionData.reqire}}"/>必填
+                <checkbox value="cb" checked="{{questionData.require}}"/>必填
             </checkbox-group>
         </view>
         <view class="border-t padding-t text-r">
-            <text class="icondel f-40"></text>
-            <text class="iconcopy f-40"></text>
+            <text class="icondel f-40" bindtap="delQuestion"></text>
+            <text class="iconcopy f-40" bindtap="copyQuestion"></text>
         </view>
     </view>
 

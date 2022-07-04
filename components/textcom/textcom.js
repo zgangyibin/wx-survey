@@ -14,7 +14,9 @@ Component({
 
     methods: {
         commonTrigger(data,id){
-            this.triggerEvent("change",{...data,id:this.data.questionData.id})//子组件通过触发change事件，传值给父组件
+             //子组件通过触发change事件，传值给父组件
+             console.log(this.data.questionData)
+            this.triggerEvent("change",{...data,id:this.data.questionData.id})//id传给父组件
         },
         changeInput(e){
             this.commonTrigger({title:e.detail.value})
@@ -23,7 +25,17 @@ Component({
             this.commonTrigger({placeholder:e.detail.value})
         },
         handleChange(e){
-            this.commonTrigger({require:e.detail.value.length>0})
+            this.commonTrigger({require:e.detail.value.length>0});
+        },
+        delQuestion(){//删除问题
+        this.commonTrigger({
+            type :"del"
+            });
+        },
+        copyQuestion(){//复制一个问题
+            this.commonTrigger({
+                type :"copy"
+            });
         }
     }
 })

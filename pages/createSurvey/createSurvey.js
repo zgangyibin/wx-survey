@@ -27,12 +27,14 @@
             ],
         }
 */
+import { createPSQ } from "../../service/service"
+const tool = require("../../utils/util")
 Page({
     data: {
-
         title:"",//问卷标题
         discription:"",//问卷描述
-        question:[],
+        endtime:tool.formatTime(new Date(),"date"),//问卷结束时间
+        question:[],//问题列表
     },
     changeTitle(e){//问卷title输入框输入值触发的函数
         console.log(e)
@@ -51,13 +53,41 @@ Page({
         const {question}=this.data;
         for(let i = 0;i < question.length;i++){
             if(question[i].id == detail.id){
-                question[i] = {...question[i],...detail};
+                if(detail.type == "del"){//根据type判断操作类型
+                    question.splice(i,1);
+                }else if(detail.type == "copy"){//复制问题,复制同样数据的时候id要重新生成唯一id
+                    question.splice(i,0,JSON.parse(JSON.stringify({...question[i],id:tool.uuid()})))
+                }
+                else {
+                    question[i] = {...question[i],...detail};
+                }        
                 this.setData({
                     question:[...question]
                 })
                 break;
             }
         }
-        console.log(question)
+    },
+    bindTimeChange(e){
+        console.log(e)
+        this.setData({
+            endtime:e.detail.value
+        })
+    },
+    handleSave(){
+        //保存问卷
+        createPSQ({
+            title:this.data.title,
+            discription:this.data.discription,
+            detail:JSON.stringify(this.data.question),
+            uid:getApp().globalData.userInfo.id,
+            endtime:new Date(this.data.endtime)
+        },function(res){
+            wx.showToast({
+              title: '保存成功',
+              icon:'success',
+              duration:2000
+            })
+        })
     }
 })

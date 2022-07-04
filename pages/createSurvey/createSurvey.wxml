@@ -6,6 +6,14 @@
     <view class="area-view">
         <textarea bindinput="changeDetail" value="{{discription}}" class="textarea-h50" placeholder="输入内容（选填）"/>
     </view>
+    <view class="title-view" style="margin-top: 0;">
+        <view>选择问卷结束时间</view>
+        <picker mode="date" value="{{endtime}}" bindchange="bindTimeChange">
+            <view class="picker">
+            当前选择: {{endtime}}
+            </view>
+    </picker>    
+    </view>
     <view class="btn-view ">
         <navigator url="/pages/questionType/questionType" class="btn"><text class="iconfont add"></text>添加一个问题</navigator>
     </view>
@@ -16,5 +24,5 @@
 </view>
 <view class="footer-placeholder"></view>
 <view class="footer">
-    <button class="footer-btn">保存</button>
+    <button class="footer-btn" bindtap="handleSave">保存</button>
 </view>

@@ -34,11 +34,57 @@ Component({
         handleChange(e){
             this.commonTrigger({require:e.detail.value.length>0})
         },
-        addOption(){//添加一个选项
-            const {option} = this.data.questionData;
-            console.log(option)
+        addOption(){ // 添加一个选项
+            let { option } = this.data.questionData;
+            console.log(option);
             this.commonTrigger({
-                option:[...option,{id:tool.uuid(),text:""}]
+              option:[
+                ...option,
+                {id: tool.uuid(),text: ""}
+              ]
+            });
+        },
+        delOption(e){//删除选项
+            const {id} = e.currentTarget.dataset;//获取自定义属性
+            let { option } = this.data.questionData;
+            for(let i = 0;i <option.length;i++){
+                if(option[i].id === id){
+                    option.splice(i,1);
+                    this.commonTrigger({
+                        option:[
+                          ...option
+                        ]
+                      });
+                    break;
+                }
+            }
+            console.log(e)
+        },
+        changeOption(e){
+            //修改选项文本内容
+            const {id} = e.currentTarget.dataset;//获取自定义属性
+            let { option } = this.data.questionData;
+            for(let i = 0;i <option.length;i++){
+                if(option[i].id === id){
+                    option[i].text = e.detail.value;
+                    this.commonTrigger({
+                        option:[
+                          ...option,
+                        ]
+                      });
+                    break;
+                }
+            }
+            console.log(e)
+        },
+        delQuestion(){//删除问题
+            this.commonTrigger({
+               type :"del"
+            });
+        },
+        copyQuestion(){//复制一个问题
+            this.commonTrigger({
+                type :"copy"
             });
         }
     }
