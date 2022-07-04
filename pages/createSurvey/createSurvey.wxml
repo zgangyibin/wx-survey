@@ -1,0 +1,20 @@
+<!--pages/createSurvey/createSurvey.wxml-->
+<view class="container"> 
+    <view class="title-view">
+        <input bindinput="changeTitle"  value="{{title}}" type="text" class="weui-input" auto-focus placeholder="输入标题"/>
+    </view>
+    <view class="area-view">
+        <textarea bindinput="changeDetail" value="{{discription}}" class="textarea-h50" placeholder="输入内容（选填）"/>
+    </view>
+    <view class="btn-view ">
+        <navigator url="/pages/questionType/questionType" class="btn"><text class="iconfont add"></text>添加一个问题</navigator>
+    </view>
+    <view wx:key="id" wx:for="{{question}}">
+        <text-com questionData="{{item}}" wx:if="{{item.type ==='text'||item.type ==='number'}}" icondel="iconfont del" iconcopy="iconfont copy" bindchange="changeValue"></text-com>
+        <checkbox-com  wx:if="{{item.type ==='checkbox'||item.type ==='radio'}}"  questionData="{{item}}"  icondel="iconfont del" iconcopy="iconfont copy" iconadd="iconfont addoption" iconremove="iconfont remove" bindchange="changeValue"></checkbox-com>
+    </view>
+</view>
+<view class="footer-placeholder"></view>
+<view class="footer">
+    <button class="footer-btn">保存</button>
+</view>

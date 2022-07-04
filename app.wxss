@@ -1,0 +1,126 @@
+/**app.wxss**/
+view,text,button,image {
+    box-sizing: border-box;
+}
+.container {
+    width: 750rpx;
+    min-height: 100vh;
+    background-color: #f1f1ef;
+    overflow: hidden;
+}
+.padding-se {
+        padding-left: 15rpx;
+        padding-right: 15rpx;
+}
+.text-r {
+    text-align: right;
+}
+.bg-white {
+    background-color: #fff;
+}
+.padding {
+    padding:15rpx;
+}
+.btn {
+    display: inline-block;
+    margin-right: 10rpx;
+    width: auto !important;
+    min-width: 154rpx;
+    height: 62rpx;
+    padding: 0 20rpx;
+    line-height: 62rpx;
+    font-size: 28rpx;
+    background-color: #0087fc;
+    color: #fff;
+    border-radius: 31rpx;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 161rpx;
+    width: 750rpx;
+    z-index: 5;
+    border-top: 1px solid #ccc;
+}
+.footer-placeholder {
+    height: 161rpx;
+}
+.footer-btn {
+    display: inline-block;
+    width: auto !important;
+    min-width: 154rpx;
+    height: 75rpx;
+    padding: 0 20rpx;
+    line-height: 62rpx;
+    font-size: 34rpx;
+    font-weight: normal;
+    color: #fff;
+    border-radius: 31rpx;
+    background-color: #29b842;
+    height: 75rpx;
+    line-height: 75rpx;
+}
+.home_container {
+    display: flex;
+}
+
+.mt-15 {
+    margin-top: 15rpx;
+}
+
+/* 小程序不支持css文件，要用字体图标，要用自定义字体的方式，Unicode */
+@font-face {
+    font-family: 'iconfont';  /* Project id 3063843 */
+    src: url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.woff2?t=1640513641996') format('woff2'),
+         url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.woff?t=1640513641996') format('woff'),
+         url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.ttf?t=1640513641996') format('truetype');
+  }
+.iconfont{
+    font-family: 'iconfont';
+    font-size: 32rpx;
+    font-style: normal;
+}
+.share::after {
+    content: "\e602";
+}
+.survey::after {
+    content: "\ec7a";
+}
+.survey1::after {
+    content: "\e616";
+}
+.add::after {
+    content: "\e622";
+}
+.text::after {
+    content: "\e646";
+}
+.number::after {
+    content: "\e660";
+}
+.radio::after {
+    content: "\e644";
+}
+.checkbox::after {
+    content: "\e645";
+}
+.judge::after {
+    content: "\e6b0";
+}
+
+.del::after {
+    content: "\e603";
+}
+.copy::after {
+    content: "\ec7a";
+}
+.remove::after {
+    content: "\e630";
+}
+.addoption::after {
+    content: "\e657";
+}

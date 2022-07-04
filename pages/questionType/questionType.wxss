@@ -1,0 +1,21 @@
+/* pages/questionType/questionType.wxss */
+.home_nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 20%;
+    height: 162rpx;
+    border: 1px solid #ccc;
+    color: rgba(0,0,0,0.4);
+    border-right-width: 0;
+    background-color: #fff;
+    font-size: 32rpx;
+}
+.home_container .home_nav:last-child {
+    border-right: 1px solid #ccc;
+}
+
+.f-icon {
+    font-size: 30rpx;
+}

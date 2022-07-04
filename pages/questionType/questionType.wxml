@@ -1,0 +1,8 @@
+<view class="container">
+    <view class="home_container padding-se mt-15">
+        <view wx:key="type" data-type="{{item.type}}" bindtap="selectType" wx:for="{{datalist}}" class="home_nav">
+            <text class="iconfont {{item.icon}} f-icon"></text>
+            <text>{{item.text}}</text>
+        </view>
+    </view>
+</view>

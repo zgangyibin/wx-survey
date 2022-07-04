@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<image class="bannerimg" src="/images/bg.png"></image>
+<view class="text-r padding-se">
+    <button class="btn"><text class="iconfont share"></text>分享</button>
+</view>
+<view class="home_container padding-se">
+    <navigator url="/pages/createSurvey/createSurvey" class="home_nav">
+        <text class="iconfont survey f-icon"></text>
+        <text>调查问卷</text>
+    </navigator>
+    <navigator url="/pages/createSurvey/createSurvey" class="home_nav border-r">
+        <text class="iconfont survey1 f-icon"></text>
+        <text>作业打卡</text>
+    </navigator>
+</view>

@@ -1,0 +1,21 @@
+<!--components/textcom/textcom.wxml-->
+<view class="con">
+    <view class="container">
+        <view class="title-view">
+            <input bindinput="changeInput" value="{{questionData.title}}" type="text" class="weui-input" auto-focus placeholder="输入自定义问题"/>
+        </view>
+        <view class="title-view border-t">
+            <input bindinput="changePlaceholder" value="{{questionData.placeholder}}" type="text" class="weui-input" auto-focus placeholder="点击这里补充，让人更容易理解该怎么填"/>
+        </view>
+        <view class="border-t padding-t">
+           <checkbox-group bindchange="handleChange">
+                <checkbox value="cb" checked="{{questionData.reqire}}"/>必填
+            </checkbox-group>
+        </view>
+        <view class="border-t padding-t text-r">
+            <text class="icondel f-40"></text>
+            <text class="iconcopy f-40"></text>
+        </view>
+    </view>
+
+</view>

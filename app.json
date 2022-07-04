@@ -1,0 +1,35 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/my/my",
+        "pages/createSurvey/createSurvey",
+        "pages/questionType/questionType"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#31bf4f",
+        "navigationBarTitleText": "爱问卷",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#b5b7b6",
+        "selectedColor": "#1ab653",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+               "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "images/homea.png",
+                "selectedIconPath": "images/homeb.png"
+            },
+            {  
+                 "pagePath": "pages/index/index",
+                "text": "创建",
+                "iconPath": "images/serveya.png",
+                "selectedIconPath": "images/serveyb.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

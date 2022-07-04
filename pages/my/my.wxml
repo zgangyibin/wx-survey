@@ -1,0 +1,18 @@
+<!--pages/my/my.wxml-->
+<view class="container"> 
+    <view class="padding-se">
+        <view class="f-large">12月7日</view>
+        <view class="bg-white padding">
+            <view class="text-r">
+                <text class="my-f-blue">调查问卷</text>
+                <text class="my-f-red">进行中</text>
+            </view>
+            <text class="h1">问卷标题</text>
+            <view class="avatar-con ">
+                <image class="avatar" src=""></image>
+                <text>昵称</text>
+            </view>
+            <view class="f-25">创建时间：2022-3-3</view>
+        </view>
+    </view>
+</view>

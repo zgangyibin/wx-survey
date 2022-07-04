@@ -1,0 +1,28 @@
+/* pages/my/my.wxss */
+.f-large {
+    font-size: 40rpx;
+}
+.my-f-blue {
+    color: #0386fa;
+    font-size: 25rpx;
+}
+.my-f-red {
+    color: #f75256;
+    font-size: 25rpx;
+}
+.h1 {
+    font-size: 45rpx;
+    font-weight: 700;
+}
+.avatar-con {
+    margin: 15rpx 0;
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    width: 77rpx;
+    height: 77rpx;
+}
+.f-25 {
+    font-size: 25rpx;
+}
