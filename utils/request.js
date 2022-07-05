@@ -1,5 +1,13 @@
 export default function Request(url,data,callback,method="get",errback=()=>{}) {
     return new Promise(function(resove,reject){
+        wx.showLoading({
+            mask:true,
+            title: '加载中',
+          })
+          setTimeout(function () {
+            wx.hideLoading()
+          }, 30000)
+        
         wx.request({
             url,
             header:{
@@ -21,6 +29,9 @@ export default function Request(url,data,callback,method="get",errback=()=>{}) {
             fail(err){
               //请求失败
               reject(err);
+            },
+            complete(){
+                wx.hideLoading();
             }
         })
     })

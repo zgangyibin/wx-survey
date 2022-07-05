@@ -4,11 +4,11 @@
     <button class="btn"><text class="iconfont share"></text>分享</button>
 </view>
 <view class="home_container padding-se">
-    <navigator url="/pages/createSurvey/createSurvey" class="home_nav">
+    <navigator url="/pages/createSurvey/createSurvey?index=1" class="home_nav">
         <text class="iconfont survey f-icon"></text>
         <text>调查问卷</text>
     </navigator>
-    <navigator url="/pages/createSurvey/createSurvey" class="home_nav border-r">
+    <navigator url="/pages/createSurvey/createSurvey?index=1" class="home_nav border-r">
         <text class="iconfont survey1 f-icon"></text>
         <text>作业打卡</text>
     </navigator>

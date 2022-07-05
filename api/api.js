@@ -6,4 +6,5 @@ export default{
     getPSQone:`${url}/dapi/vapi/getPSQone`,
     delPSQ:`${url}/dapi/vapi/delPSQ`,
     updatePSQ:`${url}/dapi/vapi/updatePSQ`,
+    getPSQList:`${url}/dapi/vapi/getPSQList`,
 }

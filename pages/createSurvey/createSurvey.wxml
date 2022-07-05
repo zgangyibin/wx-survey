@@ -4,7 +4,7 @@
         <input bindinput="changeTitle"  value="{{title}}" type="text" class="weui-input" auto-focus placeholder="输入标题"/>
     </view>
     <view class="area-view">
-        <textarea bindinput="changeDetail" value="{{discription}}" class="textarea-h50" placeholder="输入内容（选填）"/>
+        <textarea bindinput="changeDetail" value="{{description}}" class="textarea-h50" placeholder="输入内容（选填）"/>
     </view>
     <view class="title-view" style="margin-top: 0;">
         <view>选择问卷结束时间</view>
@@ -25,4 +25,5 @@
 <view class="footer-placeholder"></view>
 <view class="footer">
     <button class="footer-btn" bindtap="handleSave">保存</button>
+    <button bindtap="handleDel" wx:if="{{id}}" class="footer-btn btn-red">删除</button>
 </view>

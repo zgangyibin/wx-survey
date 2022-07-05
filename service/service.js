@@ -18,3 +18,6 @@ export function delPSQ(data,callback){
 export function updatePSQ(data,callback){
     Request(api.updatePSQ,data,callback,"post")
 }
+export function getPSQList(data,callback){
+    Request(api.getPSQList,data,callback)
+}

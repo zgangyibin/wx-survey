@@ -41,19 +41,19 @@ view,text,button,image {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 161rpx;
+    height: 135rpx;
     width: 750rpx;
     z-index: 5;
     border-top: 1px solid #ccc;
 }
 .footer-placeholder {
-    height: 161rpx;
+    height: 135rpx;
 }
 .footer-btn {
     display: inline-block;
     width: auto !important;
     min-width: 154rpx;
-    height: 75rpx;
+    height: 70rpx;
     padding: 0 20rpx;
     line-height: 62rpx;
     font-size: 34rpx;
@@ -62,7 +62,7 @@ view,text,button,image {
     border-radius: 31rpx;
     background-color: #29b842;
     height: 75rpx;
-    line-height: 75rpx;
+    line-height: 70rpx;
 }
 .home_container {
     display: flex;

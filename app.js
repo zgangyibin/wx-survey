@@ -20,7 +20,7 @@ App({
             if(res.data[0].data.length > 0){
                 getApp().globalData.userInfo = res.data[0].data[0];
                 wx.setStorageSync('userInfo', JSON.stringify(getApp().globalData.userInfo))//用户信息缓存到storage
-                wx.setStorageSync('token', res.data[0].id)//token缓存到storage
+                wx.setStorageSync('token', res.token)//token缓存到storage
 
             } 
             if(res.data[0].data.length === 0 && res.data[0].id){
@@ -39,11 +39,19 @@ App({
                                 gender:userInfo.gender,
                                 country:userInfo.country,
                                 nickName:userInfo.nickName
-                            },function(res){//存储用户信息到项目服务器
-                                console.log(res);
+                            },function(res){//存储用户信息到项目服务器,第一次保存用户信息到数据库以后，需要手动把信息存到storage和globalData里
+                                getApp().globalData.userInfo={
+                                    ...userInfo,
+                                    id:res.data[1].data.insertId
+                                }
+                                wx.setStorageSync('userInfo', JSON.stringify(getApp().globalData.userInfo))
                             })
                         },fail(fail){
-                            console.log(fail)
+                            wx.showToast({
+                                title: "获取用户信息失败",
+                                icon: 'error',
+                                duration: 2000
+                              })
                         }
                     })
                    }
