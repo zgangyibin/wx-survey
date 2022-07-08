@@ -1,22 +1,17 @@
 <!--pages/my/my.wxml-->
-<view class="container"> 
-    <view class="padding-se" wx:for="{{dataList}}" wx:key="id">
-        <navigator url="{{'/pages/createSurvey/createSurvey?id='+item.id}}">
-        <view class="f-large">12月7日</view>
-        <view class="bg-white padding">
-            <view class="text-r">
-                <text class="my-f-blue">调查问卷</text>
-                <text class="my-f-red" wx:if="{{item.end}}">已结束</text>
-                <text class="my-f-red" wx:else>进行中</text>
-
-            </view>
-            <text class="h1">{{item.title}}</text>
-            <view class="avatar-con ">
-                <image class="avatar" src="{{item.avatar}}"></image>
-                <text style="margin-left: 20rpx;">{{item.nick}}</text>
-            </view>
-            <view class="f-25">创建时间：{{item.createtime}}</view>
+<view class="container">
+  <view class="padding-se" wx:key="id" wx:for="{{dataList}}">
+    <navigator url="{{'/pages/createServey/createServey?id='+item.id}}">
+      <view class="f-large">{{item.createtime}}</view>
+      <view class="bg-white padding">
+        <view class="text-r"><text class="my-f-blue">调查问卷</text><text wx:if="{{item.end}}" class="my-f-red">已结束</text><text wx:else class="my-f-red">进行中</text></view>
+        <text class="h1">{{item.title}}</text>
+        <view class="avatar-con">
+          <image class="avatar" src="{{item.avatar}}"></image>
+          <text>{{item.nick}}</text>
         </view>
+        <view class="f-25">结束时间:{{item.endtime}}</view>
+      </view>
     </navigator>
-    </view>
+  </view>
 </view>

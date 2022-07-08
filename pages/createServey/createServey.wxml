@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="title-view">
+    <input bindinput="changeTitle" value="{{title}}" class="weui-input" auto-focus placeholder="输入标题" />
+  </view>
+  <view class="area-view">
+    <textarea bindinput="changeDetail" value="{{description}}" class="textarea-h50" bindblur="bindTextAreaBlur" placeholder="输入问卷描述(选填)" />
+  </view>
+  <view class="title-view" style="margin-top: 0;">
+    <view>选择问卷结束时间</view>
+    <picker mode="date" value="{{endtime}}" bindchange="bindTimeChange">
+      <view class="picker">
+        当前选择: {{endtime}}
+      </view>
+    </picker>
+  </view>
+  <view wx:key="id" wx:for="{{question}}">
+    <text-com questionData="{{item}}" wx:if="{{item.type==='text' || item.type==='number'}}" icondel="iconfont del" iconcopy="iconfont copy" bindchange="changeValue"></text-com>
+
+    <checkbox-com wx:if="{{item.type==='checkbox' || item.type==='radio'}}" questionData="{{item}}" icondel="iconfont del" iconcopy="iconfont copy" iconadd="iconfont addoption" iconremove="iconfont remove" bindchange="changeValue"></checkbox-com>
+  </view>
+  <view class="btn-view">
+    <navigator url="/pages/questionType/questionType" class="btn"><text class="iconfont add"></text>添加一个问题</navigator>
+  </view>
+</view>
+<view class="footer-placeholder"></view>
+<view class="footer">
+  <button class="footer-btn" bindtap="handleSave">保存</button>
+  <button  class="footer-btn" bindtap="handlePreview">预览</button>
+  <button bindtap="handleDel" wx:if="{{id}}" class="footer-btn btn-red">删除</button>
+</view>

@@ -1,26 +1,22 @@
 /**index.wxss**/
-.bannerimg {
-    height: 400rpx;
-    width: 100%;
+.bannerimg{
+  height: 400rpx;
 }
-
-.home_container {
-    display: flex;
+.home_nav{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex:0 0 25%;
+  height: 180rpx;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: rgba(0,0,0,0.4);
+  border-right-width: 0;
 }
-.home_nav {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 0 180rpx;
-    height: 180rpx;
-    border: 1px solid #ccc;
-    color: rgba(0,0,0,0.4);
-    border-right-width: 0;
+.border-r{
+  border-right: 1px solid #ccc;
 }
-.border-r {
-    border-right: 1px solid #ccc;
-}
-.f-icon {
-    font-size: 80rpx;
+.f-icon{
+  font-size: 50rpx;
 }

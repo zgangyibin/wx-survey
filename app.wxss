@@ -1,126 +1,121 @@
 /**app.wxss**/
-view,text,button,image {
-    box-sizing: border-box;
+.container{
+  width: 750rpx;
+  min-height: 100vh;
+  background-color: #f1f1ef;
+  overflow: hidden;
 }
-.container {
-    width: 750rpx;
-    min-height: 100vh;
-    background-color: #f1f1ef;
-    overflow: hidden;
+.padding-se{
+  padding-left: 15rpx;
+  padding-right: 15rpx;
 }
-.padding-se {
-        padding-left: 15rpx;
-        padding-right: 15rpx;
+.padding{
+  padding: 15rpx;
 }
-.text-r {
-    text-align: right;
+.text-r{
+  text-align: right;
 }
-.bg-white {
-    background-color: #fff;
+.bg-white{
+  background-color: #fff;
 }
-.padding {
-    padding:15rpx;
+.btn{
+  display: inline-block;
+  width: auto !important;
+  min-width: 154rpx;
+  height: 62rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx !important;
+  background-color: #0087fc;
+  color: #fff;
+  border-radius: 31rpx;
+  line-height: 62rpx !important;
 }
-.btn {
-    display: inline-block;
-    margin-right: 10rpx;
-    width: auto !important;
-    min-width: 154rpx;
-    height: 62rpx;
-    padding: 0 20rpx;
-    line-height: 62rpx;
-    font-size: 28rpx;
-    background-color: #0087fc;
-    color: #fff;
-    border-radius: 31rpx;
+.footer{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 750rpx;
+  height: 135rpx;
+  background-color: #fff;
+  z-index: 5;
+  border-top: 1px solid #ccc;
 }
-.footer {
-    position: fixed;
-    bottom: 0;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 135rpx;
-    width: 750rpx;
-    z-index: 5;
-    border-top: 1px solid #ccc;
+.footer-placeholder{
+  height: 161rpx;
 }
-.footer-placeholder {
-    height: 135rpx;
+.footer-btn{
+  display: inline-block;
+  width: auto !important;
+  min-width: 154rpx;
+  height: 70rpx;
+  padding: 0 20rpx;
+  font-size: 34rpx !important;
+  font-weight: 400 !important;
+  background-color: #29b842;
+  color: #fff;
+  border-radius: 37rpx;
+  line-height: 70rpx !important;
 }
-.footer-btn {
-    display: inline-block;
-    width: auto !important;
-    min-width: 154rpx;
-    height: 70rpx;
-    padding: 0 20rpx;
-    line-height: 62rpx;
-    font-size: 34rpx;
-    font-weight: normal;
-    color: #fff;
-    border-radius: 31rpx;
-    background-color: #29b842;
-    height: 75rpx;
-    line-height: 70rpx;
+.btn-red{
+  background-color: red;
 }
-.home_container {
-    display: flex;
+.home_container{
+  display: flex;
 }
-
-.mt-15 {
-    margin-top: 15rpx;
+.mt-15{
+  margin-top: 15rpx;
 }
 
-/* 小程序不支持css文件，要用字体图标，要用自定义字体的方式，Unicode */
+/* 小程序不支持css文件，要用字体图片，需要用自定义字体的方式，引入字体的Unicode编码显示对应的图标 */
 @font-face {
-    font-family: 'iconfont';  /* Project id 3063843 */
-    src: url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.woff2?t=1640513641996') format('woff2'),
-         url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.woff?t=1640513641996') format('woff'),
-         url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.ttf?t=1640513641996') format('truetype');
-  }
+  font-family: 'iconfont';  /* Project id 3063843 */
+  src: url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.woff2?t=1640513641996') format('woff2'),
+       url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.woff?t=1640513641996') format('woff'),
+       url('//at.alicdn.com/t/font_3063843_n1fzijpnspb.ttf?t=1640513641996') format('truetype');
+}
 .iconfont{
-    font-family: 'iconfont';
-    font-size: 32rpx;
-    font-style: normal;
+  font-family: 'iconfont';
+  font-size: 32rpx;
+  font-style: normal;
 }
-.share::after {
-    content: "\e602";
+.share::after{
+  content: "\e602";
 }
-.survey::after {
-    content: "\ec7a";
+.servy::after{
+  content: "\ec7a";
 }
-.survey1::after {
-    content: "\e616";
+.servy1::after{
+  content: "\e616";
 }
-.add::after {
-    content: "\e622";
+.add::after{
+  content: "\e622";
 }
-.text::after {
-    content: "\e646";
+.text::after{
+  content: "\e646";
 }
-.number::after {
-    content: "\e660";
+.number::after{
+  content: "\e660";
 }
-.radio::after {
-    content: "\e644";
+.radio::after{
+  content: "\e644";
 }
-.checkbox::after {
-    content: "\e645";
+.checkbox::after{
+  content: "\e645";
 }
-.judge::after {
-    content: "\e6b0";
+.judge::after{
+  content: "\e645";
 }
-
-.del::after {
-    content: "\e603";
+.del::after{
+  content: "\e603";
 }
-.copy::after {
-    content: "\ec7a";
+.copy::after{
+  content: "\ec7a";
 }
-.remove::after {
-    content: "\e630";
+.remove::after{
+  content: "\e630";
 }
-.addoption::after {
-    content: "\e657";
+.addoption::after{
+  content: "\e657";
 }

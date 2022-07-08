@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "text-com":"/components/textcom/textcom",
+    "checkbox-com": "/components/checkboxcom/checkboxcom"
+  }
+}

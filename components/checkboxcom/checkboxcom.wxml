@@ -1,29 +1,44 @@
-<!--components/checkboxcom/checkboxcom.wxml-->
-<view class="con">
-    <view class="container">
-        <view class="title-view">
-            <input type="text" bindinput="changeInput" value="{{questionData.title}}" class="weui-input" auto-focus placeholder="输入自定义问题"/>
-        </view>
-        <view class="title-view border-t">
-            <input type="text" bindinput="changePlaceholder" value="{{questionData.placeholder}}"  class="weui-input" auto-focus placeholder="点击这里补充，让人更容易理解该怎么填"/>
-        </view>
-        <view class="option" wx:key="id" wx:for="{{questionData.option}}">
-            <view><text data-id="{{item.id}}" bindtap="delOption" class="iconremove f-red"></text></view>
-            <view><input bindinput="changeOption" type="text" value="{{item.text}}" data-id="{{item.id}}" class="weui-input" auto-focus placeholder="点击这里输入选项"/></view>
-        </view>
-        <view class="option">
-            <view><text  bindtap="addOption" class="iconadd f-add"></text></view>
-            <view>添加选项</view>
-        </view>
-        <view class="border-t padding-t">
-            <checkbox-group bindchange="handleChange">
-                <checkbox value="cb" checked="{{questionData.require}}"/>必填
-            </checkbox-group>
-        </view>
-        <view class="border-t padding-t text-r">
-            <text class="icondel f-40" bindtap="delQuestion"></text>
-            <text class="iconcopy f-40" bindtap="copyQuestion"></text>
-        </view>
+<view class="con" wx:if="{{!preview}}">
+  <view class="container">
+    <view class="title-view">
+      <input bindinput="changeInput" value="{{questionData.title}}" class="weui-input" auto-focus placeholder="输入自定义问题"/>
+    </view>
+    <view class="title-view border-t">
+      <input bindinput="changePlaceholder" value="{{questionData.placeholder}}" class="weui-input" auto-focus placeholder="点击这里补充，让人更容易怎么填"/>
+    </view>
+    <view class="option" wx:key="id" wx:for="{{questionData.option}}">
+      <view><text data-id="{{item.id}}" bindtap="delOption"  class="iconremove f-red"></text></view>
+      <view><input bindinput="changeOption" data-id="{{item.id}}" value="{{item.text}}" class="weui-input" auto-focus placeholder="点击这里输入选项"/></view>
     </view>
 
+    <view class="option">
+      <view><text bindtap="addOption" class="iconadd f-add"></text></view>
+      <view>添加选项</view>
+    </view>
+
+    <view class="border-t padding-t">
+      <checkbox-group bindchange="handleChange">
+        <checkbox value="cb" checked="{{questionData.require}}"/>必填
+      </checkbox-group>
+    </view>
+    <view class="border-t padding-t text-r">
+      <text bindtap="delQuestionData" class="icondel f-40"></text>
+      <text bindtap="copyQuestionData" class="iconcopy f-40"></text>
+    </view>
+  </view>
+</view>
+
+<view class="con" wx:else>
+  <view class="container">
+    <view class="title-view">
+     <text wx:if="{{questionData.require}}" class="f-red">*</text>{{questionData.title}}
+    </view>
+    <view>{{questionData.placeholder}}</view>
+    <checkbox-group bindchange="handleCheckboxValue" wx:if="{{questionData.type === 'checkbox'}}">
+      <view wx:key="id" wx:for="{{questionData.option}}"><checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.text}}</view>
+    </checkbox-group>
+    <radio-group bindchange="handleRadioValue" wx:else="">
+      <view wx:key="id" wx:for="{{questionData.option}}"><radio value="{{item.id}}" checked="{{item.checked}}"/>{{item.text}}</view>
+    </radio-group>
+  </view>
 </view>

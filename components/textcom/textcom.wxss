@@ -1,28 +1,30 @@
-/* components/textcom/textcom.wxss */
-.con {
-    padding: 15rpx;
-    margin: 15rpx 0;
+.con{
+  padding: 15rpx;
+  margin: 15rpx 0;
 }
-.container {
-    padding: 15rpx;
-    background-color: #fff;
+.container{
+  padding: 15rpx;
+  background-color: #fff;
 }
-.title-view {
-    background-color: #fff;
-    padding: 35rpx 15rpx;
+.title-view{
+  background-color: #fff;
+  padding: 35rpx 15rpx;
 }
-.border-t {
-    border-top: 1px solid #ccc;
+.border-t{
+  border-top: 1px solid #ccc;
 }
 .padding-t{
-    padding: 15rpx 0;
+  padding:15rpx 0;
 }
-.text-r {
-    text-align: right;
-    color: #31bf4f;
+.text-r{
+  text-align: right;
+  color: #31bf4f;
 }
-.f-40 {
-    display: inline-block;
-    margin-right: 15rpx;
-    font-size: 40rpx;
+.f-40{
+  display: inline-block;
+  margin-right: 15rpx;
+  font-size: 40rpx;
+}
+.weui-input{
+  border-bottom: 1px solid #ccc;
 }

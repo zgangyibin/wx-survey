@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="title-view">
+   {{title}}
+  </view>
+  <view class="area-view">
+   {{description}}
+  </view>
+  <view class="title-view" style="margin-top: 0;">
+    <view class="picker">
+      结束时间: {{endtime}}
+    </view>
+  </view>
+  <view wx:key="id" wx:for="{{askData}}">
+    <text-com preview="{{true}}" questionData="{{item}}" wx:if="{{item.type==='text' || item.type==='number'}}" icondel="iconfont del" iconcopy="iconfont copy" bindchange="changeValue"></text-com>
+
+    <checkbox-com preview="{{true}}" wx:if="{{item.type==='checkbox' || item.type==='radio'}}" questionData="{{item}}" icondel="iconfont del" iconcopy="iconfont copy" iconadd="iconfont addoption" iconremove="iconfont remove" bindchange="changeValue"></checkbox-com>
+  </view>
+</view>
+<view class="footer-placeholder"></view>
+<view class="footer">
+  <button class="footer-btn" bindtap="handleSave">提交</button>
+</view>
