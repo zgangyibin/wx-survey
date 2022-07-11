@@ -5,13 +5,7 @@ Page({
   data: {
     dataList: []
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad() {
-    // const EventChannel = this.getOpenerEventChannel();// 获取eventChannel对象
-    // console.log(EventChannel);
-    // EventChannel.on("pageChange", this.pageChange) // 监听pageChange事件
     this.init();
   },
   onTabItemTap(){ // 微信小程序的tab页面切换，不会销毁当前页面，不会触发onLoad时间。onTabItemTap可以监听tab页面切换。

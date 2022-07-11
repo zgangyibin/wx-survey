@@ -1,8 +1,5 @@
 // components/textcom/textcom.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: { // 只读属性，数据放在data属性里面。如果要在组件里面修改props的属性，只能通过子组件把值传递给父组件，在父组件修改值。
     questionData:{ 
       type: Object,
@@ -14,16 +11,8 @@ Component({
     },
   },
   externalClasses:["icondel","iconcopy"],// 组件的样式只能用组件内部的样式，没办法用全局样式，externalClasses可以继承父组件的样式。定义一个样式属性，父组件可以给该属性传递样式
-  /**
-   * 组件的初始数据
-   */
   data: {
-
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
     commonTrigger(data){
       this.triggerEvent("change",{...data,id:this.data.questionData.id});//子组件通过触发change事件，传值到父组件。把当前数据的id属性传到父组件。

@@ -9,7 +9,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#31bf4f",
-    "navigationBarTitleText": "爱问卷",
+    "navigationBarTitleText": "张张问卷",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {

@@ -3,6 +3,6 @@
   "projectname": "wechat-servey",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": true
+    "urlCheck": false
   }
 }

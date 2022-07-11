@@ -15,7 +15,6 @@
   </view>
   <view wx:key="id" wx:for="{{question}}">
     <text-com questionData="{{item}}" wx:if="{{item.type==='text' || item.type==='number'}}" icondel="iconfont del" iconcopy="iconfont copy" bindchange="changeValue"></text-com>
-
     <checkbox-com wx:if="{{item.type==='checkbox' || item.type==='radio'}}" questionData="{{item}}" icondel="iconfont del" iconcopy="iconfont copy" iconadd="iconfont addoption" iconremove="iconfont remove" bindchange="changeValue"></checkbox-com>
   </view>
   <view class="btn-view">
